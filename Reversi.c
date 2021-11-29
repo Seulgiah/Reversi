@@ -29,11 +29,41 @@ coordenada EscolheJogada()
 }
 
 
-void DesenhaTabuleiro()
+void DesenhaTabuleiro(int tabuleiro[8][8])
 {
-    return 0;
-}
+   //**Usando uma matriz auxiliar para printar utilizando a tabela ASCII
+    
+    
+    int auxiliar[8][8];
 
+    for(int i = 0; i<8; i++)
+    {
+        for(int y = 0; y<8; y++)
+            {
+                if(tabuleiro[y][i] == -1)
+                auxiliar[y][i] = 66;
+            
+
+                if(tabuleiro[y][i] == 1)
+                auxiliar[y][i] = 87;  
+            }
+    }
+     
+
+    for(int i = 0; i<8; i++)
+    {
+        for(int y = 0; y<8; y++)
+        {
+            printf(" |%c|", auxiliar[y][i]);
+
+        }
+                printf("\n");
+    }
+
+}
+    
+    
+    
 int main()
 {
 
